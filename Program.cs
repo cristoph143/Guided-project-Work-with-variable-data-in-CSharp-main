@@ -109,10 +109,10 @@ internal abstract class Program
         } while (menuSelection != "exit");
     }
 
-    private static string? MenuSelection(int maxPets1, string[,] strings, string s)
+    private static void MenuSelection(int maxPets1, string[,] strings, string s)
     {
         // use switch-case to process the selected menu option
-        return s switch
+        _ = s switch
         {
             "1" => DisplayListOfDogs(maxPets1, strings),
             "2" => DisplaySearchDogResult(maxPets1, strings),
