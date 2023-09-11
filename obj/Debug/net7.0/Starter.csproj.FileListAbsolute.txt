@@ -1,0 +1,14 @@
+J:\Intern\Udemy\CSharp\CsharpProjects\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\bin\Debug\net7.0\Starter.exe
+J:\Intern\Udemy\CSharp\CsharpProjects\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\bin\Debug\net7.0\Starter.deps.json
+J:\Intern\Udemy\CSharp\CsharpProjects\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\bin\Debug\net7.0\Starter.runtimeconfig.json
+J:\Intern\Udemy\CSharp\CsharpProjects\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\bin\Debug\net7.0\Starter.dll
+J:\Intern\Udemy\CSharp\CsharpProjects\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\bin\Debug\net7.0\Starter.pdb
+J:\Intern\Udemy\CSharp\CsharpProjects\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\obj\Debug\net7.0\Starter.GeneratedMSBuildEditorConfig.editorconfig
+J:\Intern\Udemy\CSharp\CsharpProjects\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\obj\Debug\net7.0\Starter.AssemblyInfoInputs.cache
+J:\Intern\Udemy\CSharp\CsharpProjects\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\obj\Debug\net7.0\Starter.AssemblyInfo.cs
+J:\Intern\Udemy\CSharp\CsharpProjects\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\obj\Debug\net7.0\Starter.csproj.CoreCompileInputs.cache
+J:\Intern\Udemy\CSharp\CsharpProjects\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\obj\Debug\net7.0\Starter.dll
+J:\Intern\Udemy\CSharp\CsharpProjects\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\obj\Debug\net7.0\refint\Starter.dll
+J:\Intern\Udemy\CSharp\CsharpProjects\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\obj\Debug\net7.0\Starter.pdb
+J:\Intern\Udemy\CSharp\CsharpProjects\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\obj\Debug\net7.0\Starter.genruntimeconfig.cache
+J:\Intern\Udemy\CSharp\CsharpProjects\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\obj\Debug\net7.0\ref\Starter.dll
