@@ -159,29 +159,30 @@ internal abstract class Program
     }
 
     private static bool MatchesAnyDog(string[,] strings1, int i, string[] dogSearches1, bool matchesAnyDog)
-        {
-            // #4 update to "rotating" animation with countdown
-            string[] searchingIcons = { " |", " /", "--", " \\", " *" };
-            if (!strings1[i, 1].Contains("dog")) return matchesAnyDog;
-            // Search combined descriptions and report results
-            var dogDescription = strings1[i, 4] + "\n" + strings1[i, 5];
-            var matchesCurrentDog = false;
+    {
+        // #4 update to "rotating" animation with countdown
+        string[] searchingIcons = { " |", " /", "--", " \\", " *" };
+        if (!strings1[i, 1].Contains("dog")) return matchesAnyDog;
+        // Search combined descriptions and report results
+        var dogDescription = strings1[i, 4] + "\n" + strings1[i, 5];
+        var matchesCurrentDog = false;
 
-            foreach (var term in dogSearches1)
-                // only search if there is a term to search for
-                (matchesAnyDog, matchesCurrentDog) = MatchesAnyDogTerm(strings1, i, searchingIcons, term, dogDescription, matchesCurrentDog);
+        foreach (var term in dogSearches1)
+            // only search if there is a term to search for
+            (matchesAnyDog, matchesCurrentDog) =
+                MatchesAnyDogTerm(strings1, i, searchingIcons, term, dogDescription, matchesCurrentDog);
 
-            // #3d if the current dog is match, display the dog's info
-            if (matchesCurrentDog)
-                Console.WriteLine($"\r{strings1[i, 3]} ({strings1[i, 0]})\n{dogDescription}\n");
+        // #3d if the current dog is match, display the dog's info
+        if (matchesCurrentDog)
+            Console.WriteLine($"\r{strings1[i, 3]} ({strings1[i, 0]})\n{dogDescription}\n");
 
-            return matchesAnyDog;
-        }
+        return matchesAnyDog;
+    }
 
     private static (bool matchesAnyDog, bool matchesCurrentDog) MatchesAnyDogTerm(string[,] strings1, int i,
         string[] searchingIcons1, string term, string dogDescription, bool matchesCurrentDog)
     {
-        bool matchesAnyDog = false;
+        var matchesAnyDog = false;
         if (term == null || term.Trim() == "") return (matchesAnyDog, matchesCurrentDog);
         for (var j = 2; j > -1; j--)
         {
