@@ -146,12 +146,9 @@ internal abstract class Program
         for (var i = 0; i < dogSearches.Length; i++) dogSearches[i] = dogSearches[i].Trim();
 
         Array.Sort(dogSearches);
-        // #4 update to "rotating" animation with countdown
-        string[] searchingIcons = { " |", " /", "--", " \\", " *" };
-
         var matchesAnyDog = false;
         // loops through the ourAnimals array to search for matching animals
-        for (var i = 0; i < maxPets1; i++) matchesAnyDog = MatchesAnyDog(strings, i, dogSearches, searchingIcons, matchesAnyDog);
+        for (var i = 0; i < maxPets1; i++) matchesAnyDog = MatchesAnyDog(strings, i, dogSearches, matchesAnyDog);
 
         if (!matchesAnyDog)
             Console.WriteLine("None of our dogs are a match found for: " + dogCharacteristics);
@@ -161,8 +158,10 @@ internal abstract class Program
         return readResult;
     }
 
-    private static bool MatchesAnyDog(string[,] strings1, int i, string[] dogSearches1, string[] searchingIcons1, bool matchesAnyDog)
+    private static bool MatchesAnyDog(string[,] strings1, int i, string[] dogSearches1, bool matchesAnyDog)
         {
+            // #4 update to "rotating" animation with countdown
+            string[] searchingIcons = { " |", " /", "--", " \\", " *" };
             if (!strings1[i, 1].Contains("dog")) return matchesAnyDog;
             // Search combined descriptions and report results
             var dogDescription = strings1[i, 4] + "\n" + strings1[i, 5];
@@ -170,7 +169,7 @@ internal abstract class Program
 
             foreach (var term in dogSearches1)
                 // only search if there is a term to search for
-                (matchesAnyDog, matchesCurrentDog) = MatchesAnyDogTerm(strings1, i, searchingIcons1, term, dogDescription, matchesCurrentDog);
+                (matchesAnyDog, matchesCurrentDog) = MatchesAnyDogTerm(strings1, i, searchingIcons, term, dogDescription, matchesCurrentDog);
 
             // #3d if the current dog is match, display the dog's info
             if (matchesCurrentDog)
