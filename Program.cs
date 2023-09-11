@@ -141,9 +141,9 @@ internal abstract class Program
     {
         // #1 Display all dogs with a multiple search characteristics
         var dogCharacteristics = GetDogCharacteristics();
-        var dogSearches = dogCharacteristics.Split(",");
+        string?[] dogSearches = dogCharacteristics.Split(",");
         // trim leading and trailing spaces from each search term
-        for (var i = 0; i < dogSearches.Length; i++) dogSearches[i] = dogSearches[i].Trim();
+        for (var i = 0; i < dogSearches.Length; i++) dogSearches[i] = dogSearches[i]?.Trim();
 
         Array.Sort(dogSearches);
         var matchesAnyDog = false;
@@ -158,7 +158,7 @@ internal abstract class Program
         return readResult;
     }
 
-    private static bool MatchesAnyDog(string[,] strings1, int i, string[] dogSearches1, bool matchesAnyDog)
+    private static bool MatchesAnyDog(string[,] strings1, int i, string?[] dogSearches1, bool matchesAnyDog)
     {
         // #4 update to "rotating" animation with countdown
         string[] searchingIcons = { " |", " /", "--", " \\", " *" };
@@ -180,7 +180,7 @@ internal abstract class Program
     }
 
     private static (bool matchesAnyDog, bool matchesCurrentDog) MatchesAnyDogTerm(string[,] strings1, int i,
-        string[] searchingIcons1, string term, string dogDescription, bool matchesCurrentDog)
+        string[] searchingIcons1, string? term, string dogDescription, bool matchesCurrentDog)
     {
         var matchesAnyDog = false;
         if (term == null || term.Trim() == "") return (matchesAnyDog, matchesCurrentDog);
